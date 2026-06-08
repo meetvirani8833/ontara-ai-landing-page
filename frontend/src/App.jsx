@@ -11,6 +11,7 @@ import Work from './pages/Work';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 
 const PageWrapper = ({ children }) => (
   <motion.div
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+          <Route path="/privacy" element={<PageWrapper><Privacy /></PageWrapper>} />
         </Routes>
       </AnimatePresence>
 
