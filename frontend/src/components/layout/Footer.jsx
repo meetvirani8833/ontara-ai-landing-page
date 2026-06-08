@@ -128,6 +128,7 @@ export default function Footer() {
                 <Link to="/work" className="hover:text-white transition-colors">Case Studies</Link>
                 <Link to="/blog" className="hover:text-white transition-colors">Insights</Link>
                 <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
+                <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               </div>
             </div>
 
@@ -143,7 +144,7 @@ export default function Footer() {
 
           {/* Bottom Bar */}
           <div className="mt-16 lg:mt-24 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-wider font-mono text-white/50">
-            <p>© 2025 Ontara AI</p>
+            <p>© 2025–2026 Ontara AI</p>
             <div className="flex items-center gap-6">
               <a href="mailto:ontaraai@gmail.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">ontaraai@gmail.com</a>
               <a href="https://www.linkedin.com/company/ontaraai/posts/?feedView=all" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
