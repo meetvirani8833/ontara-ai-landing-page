@@ -293,7 +293,7 @@ export default function Privacy() {
                 For privacy concerns or data requests, contact Ontara AI:
               </p>
               <div className="flex flex-col gap-4">
-                
+                <a
                   href="mailto:ontaraai@gmail.com"
                   className="group inline-flex items-center gap-4 text-white/80 hover:text-[var(--accent)] transition-colors"
                 >
@@ -304,7 +304,7 @@ export default function Privacy() {
                   </span>
                   <span className="text-lg font-mono tracking-wide">ontaraai@gmail.com</span>
                 </a>
-                
+                <a
                   href="https://ontaraai.solutions"
                   target="_blank"
                   rel="noopener noreferrer"
