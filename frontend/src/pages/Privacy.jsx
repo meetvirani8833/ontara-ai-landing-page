@@ -48,9 +48,15 @@ const sections = [
     number: '03',
     title: 'Data Storage and Security',
     content: (
-      <p>
-        All data is stored securely in encrypted databases. We implement industry-standard security measures including HTTPS encryption, webhook signature verification, and access controls. Conversation data is retained only as long as necessary to provide our services or as required by law.
-      </p>
+      <>
+        <p className="mb-4">
+          All data is stored securely in encrypted databases. We implement industry-standard security measures including HTTPS encryption, webhook signature verification, and access controls.
+        </p>
+        <p>
+          <strong className="text-[var(--ink)]">Data Retention:</strong>{' '}
+          Conversation logs and account information are retained for up to 12 months from the last activity on an account, unless a business client requests earlier deletion or a longer period is required to comply with law. Backups may persist for a limited additional period before being permanently purged.
+        </p>
+      </>
     ),
   },
   {
@@ -65,7 +71,25 @@ const sections = [
             All WhatsApp messages are sent and received through Meta's WhatsApp Cloud API. Your message data, phone numbers, and profile information are processed and stored on Meta's infrastructure as part of this integration. Subject to{' '}
             <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
               WhatsApp's Privacy Policy
+            </a>{' '}and{' '}
+            <a href="https://www.whatsapp.com/legal/business-policy" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
+              WhatsApp Business Policy
             </a>.
+
+            <span className="block mt-3">
+              <strong className="text-[var(--ink)]">Billing by Meta:</strong>{' '}
+              Conversation-based charges for WhatsApp messaging are billed and collected directly by Meta from the payment method linked to your WhatsApp Business Account (WABA). Ontara Connect charges only a separate platform/subscription fee for use of our software — we do not set, process, collect, or have visibility into Meta's conversation charges. Any billing disputes, unexpected deductions, refunds, currency conversion, or tax issues related to charges made by Meta must be raised directly with Meta and are outside our control and responsibility.
+            </span>
+
+            <span className="block mt-3">
+              <strong className="text-[var(--ink)]">Changes to Meta's Policies & Pricing:</strong>{' '}
+              Meta may, at its sole discretion and without our control, change its pricing, messaging policies, template approval rules, rate limits, or platform features at any time. Such changes may affect message delivery, the amount charged by Meta, or account functionality. We are not liable for any loss, cost, or disruption arising from changes made unilaterally by Meta. Where changes materially affect your use of our platform, we will make reasonable efforts to notify you, but the update itself remains Meta's decision.
+            </span>
+
+            <span className="block mt-3">
+              <strong className="text-[var(--ink)]">Account Restrictions by Meta:</strong>{' '}
+              Meta independently reserves the right to restrict, flag, suspend, or ban a WhatsApp Business Account for violations of its Business Policy, Commerce Policy, or messaging limits. These decisions are made solely by Meta based on its own review; we do not control, influence, or guarantee reinstatement of accounts actioned by Meta.
+            </span>
           </li>
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">OpenAI:</strong>{' '}
@@ -77,6 +101,10 @@ const sections = [
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">MongoDB:</strong>{' '}
             For secure, encrypted data storage of conversation logs and account information.
+          </li>
+          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+            <strong className="text-[var(--ink)]">International Data Transfers:</strong>{' '}
+            Because Meta, OpenAI, and MongoDB operate infrastructure globally, your data may be transferred to, stored in, and processed in countries outside India, including the United States. By using our services, you acknowledge and consent to this transfer.
           </li>
         </ul>
       </>
@@ -93,6 +121,18 @@ const sections = [
   },
   {
     number: '06',
+    title: "Children's Data",
+    content: (
+      <p>
+        Our services are not directed to children, and WhatsApp's own terms restrict use of its platform by individuals under 13. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected data from a child, we will take steps to delete it promptly. If you believe a child's data has been shared with us, please contact us at{' '}
+        <a href="mailto:ontaraai@gmail.com" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
+          ontaraai@gmail.com
+        </a>.
+      </p>
+    ),
+  },
+  {
+    number: '07',
     title: 'Your Rights',
     content: (
       <>
@@ -125,7 +165,25 @@ const sections = [
     ),
   },
   {
-    number: '07',
+    number: '08',
+    title: 'Limitation of Liability',
+    content: (
+      <p>
+        To the maximum extent permitted by law, Ontara AI and Ontara Connect shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, arising from your use of our platform. We are not liable for outages, data loss, delivery failures, or service interruptions caused by third-party providers, including Meta, OpenAI, MongoDB, or our hosting infrastructure. Our total liability for any claim arising from these services shall not exceed the platform fees paid to us in the three (3) months preceding the claim.
+      </p>
+    ),
+  },
+  {
+    number: '09',
+    title: 'Governing Law and Jurisdiction',
+    content: (
+      <p>
+        This Privacy Policy is governed by the laws of India. Any disputes arising out of or relating to this policy shall be subject to the exclusive jurisdiction of the courts in Bengaluru, Karnataka, India.
+      </p>
+    ),
+  },
+  {
+    number: '10',
     title: 'Changes to This Policy',
     content: (
       <p>
@@ -224,7 +282,7 @@ export default function Privacy() {
             <div>
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-[1px] bg-white/20" />
-                <p className="text-xs font-mono tracking-widest uppercase text-white/50">Section 08</p>
+                <p className="text-xs font-mono tracking-widest uppercase text-white/50">Section 11</p>
               </div>
               <h2 className="text-4xl md:text-5xl font-sans font-medium tracking-tight leading-tight">
                 Contact Us
@@ -235,7 +293,7 @@ export default function Privacy() {
                 For privacy concerns or data requests, contact Ontara AI:
               </p>
               <div className="flex flex-col gap-4">
-                <a
+                
                   href="mailto:ontaraai@gmail.com"
                   className="group inline-flex items-center gap-4 text-white/80 hover:text-[var(--accent)] transition-colors"
                 >
@@ -246,7 +304,7 @@ export default function Privacy() {
                   </span>
                   <span className="text-lg font-mono tracking-wide">ontaraai@gmail.com</span>
                 </a>
-                <a
+                
                   href="https://ontaraai.solutions"
                   target="_blank"
                   rel="noopener noreferrer"
