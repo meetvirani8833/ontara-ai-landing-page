@@ -3,18 +3,44 @@ import { motion } from 'framer-motion';
 const sections = [
   {
     number: '01',
+    title: 'Who This Policy Covers',
+    content: (
+      <p>
+        We interact with two distinct groups of people, and this policy applies differently to each: <strong className="text-[var(--ink)]">Business Users</strong> — the businesses (and their authorized representatives) who create and manage an Ontara Connect account — and <strong className="text-[var(--ink)]">End Users</strong> — the customers of our business clients, who message those businesses via WhatsApp and never directly sign up with Ontara. Where the distinction matters, we say so explicitly below.
+      </p>
+    ),
+  },
+  {
+    number: '02',
+    title: 'Our Role: Data Fiduciary and Data Processor',
+    content: (
+      <>
+        <p className="mb-4">
+          Depending on the nature of the particular processing activity and the applicable contractual arrangement, Ontara AI may act as a <strong className="text-[var(--ink)]">Data Fiduciary</strong> (in relation to our direct Business Users — e.g., account, billing, and login data) or may process personal data on behalf of a Business User as a <strong className="text-[var(--ink)]">Data Processor / service provider</strong> (in relation to End-User conversation data).
+        </p>
+        <p>
+          For customer conversations handled through Ontara Connect, the Business User generally determines the purpose for which their customers' personal data is processed. Ontara processes that data to deliver the contracted service — routing, AI-generated responses, storage, and dashboard access. Business Users remain responsible for having a lawful basis to process their own customers' data and for informing their customers accordingly (see Section 08).
+        </p>
+      </>
+    ),
+  },
+  {
+    number: '03',
     title: 'Information We Collect',
     content: (
       <>
-        <p className="mb-4">We collect the following types of information:</p>
         <ul className="list-none space-y-4">
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">Business Account Information:</strong>{' '}
-            When a business signs up via our platform, we collect their name, WhatsApp Business Account details, phone number, business name, and authorized representative information through Meta's Embedded Signup flow.
+            When a business signs up via our platform, we collect their name, WhatsApp Business Account details, phone number, business name, and authorized representative information through Meta's Embedded Signup flow, along with login and billing information.
           </li>
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">End-User Message Data:</strong>{' '}
             When customers message a business through WhatsApp, we collect and process the sender's name, phone number, WhatsApp profile name, message content (text, media, and attachments), and timestamps. This constitutes WhatsApp message logs that we retain to facilitate automated responses, customer support, and conversation history.
+          </li>
+          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+            <strong className="text-[var(--ink)]">Business Content / Knowledge Base Data:</strong>{' '}
+            Business Users may upload documents, FAQs, product catalogs, policies, or other materials to configure AI-powered responses (e.g., for retrieval-augmented generation). This content may be processed, stored, indexed, converted into embeddings, and retrieved to generate responses. We do not independently verify the accuracy or lawfulness of content a Business User uploads.
           </li>
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">Usage Data:</strong>{' '}
@@ -25,7 +51,7 @@ const sections = [
     ),
   },
   {
-    number: '02',
+    number: '04',
     title: 'How We Use Your Information',
     content: (
       <ul className="list-none space-y-3">
@@ -39,32 +65,53 @@ const sections = [
           To manage and display conversation history in the business admin dashboard
         </li>
         <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+          To generate and retrieve relevant responses using uploaded business content (RAG/knowledge base)
+        </li>
+        <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
           To improve our platform's response quality and reliability
         </li>
       </ul>
     ),
   },
   {
-    number: '03',
-    title: 'Data Storage and Security',
+    number: '05',
+    title: 'AI and Large Language Model Processing',
     content: (
       <>
         <p className="mb-4">
-          All data is stored securely in encrypted databases. We implement industry-standard security measures including HTTPS encryption, webhook signature verification, and access controls.
+          Ontara Connect uses artificial intelligence and machine-learning technologies, including large language models, retrieval-augmented generation, embeddings, and automated classification or routing systems, to generate responses.
         </p>
-        <p>
-          <strong className="text-[var(--ink)]">Data Retention:</strong>{' '}
-          Conversation logs and account information are retained for up to 12 months from the last activity on an account, unless a business client requests earlier deletion or a longer period is required to comply with law. Backups may persist for a limited additional period before being permanently purged.
-        </p>
+        <ul className="list-none space-y-4">
+          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+            AI-generated responses may occasionally be inaccurate or inappropriate; they are not a substitute for professional advice, and Business Users are responsible for reviewing AI output where appropriate for their use case.
+          </li>
+          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+            Message content, and where relevant, conversation history, business knowledge-base content, and metadata necessary to generate a response, may be transmitted to our AI providers (see Section 07).
+          </li>
+          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+            <strong className="text-[var(--ink)]">We do not use customer content, WhatsApp conversations, uploaded documents, or generated responses to train our own general-purpose AI models, unless expressly agreed with the Business User in writing.</strong>
+          </li>
+        </ul>
       </>
     ),
   },
   {
-    number: '04',
-    title: 'Third-Party Services',
+    number: '06',
+    title: 'Sensitive Information',
+    content: (
+      <p>
+        Ontara Connect is a messaging pipeline and cannot control what an End User types into a conversation. Messages may occasionally contain sensitive personal information (for example, identity numbers, financial details, or health information). Business Users should not configure Ontara Connect to solicit or process categories of sensitive personal data unless they have an appropriate lawful basis and adequate safeguards in place to do so. Ontara does not knowingly use such information for any purpose beyond delivering the requested service.
+      </p>
+    ),
+  },
+  {
+    number: '07',
+    title: 'Third-Party Services and Subprocessors',
     content: (
       <>
-        <p className="mb-4">Our platform integrates with the following third-party services. Your data, including names, phone numbers, and WhatsApp message logs, is processed and transmitted through these services as part of delivering our platform:</p>
+        <p className="mb-4">
+          We rely on the following subprocessors to deliver Ontara Connect. Data described in Section 03 may be transmitted to and processed by these providers as part of delivering our platform. This list may be updated as our infrastructure evolves; material changes will be reflected here with an updated revision date.
+        </p>
         <ul className="list-none space-y-4">
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">Meta WhatsApp Business Platform:</strong>{' '}
@@ -93,38 +140,78 @@ const sections = [
           </li>
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">OpenAI:</strong>{' '}
-            Message content may be sent to OpenAI's API for generating intelligent automated responses. No personally identifiable information beyond message content is shared. Subject to{' '}
+            Where we use third-party AI model providers, selected data — such as message content and relevant conversation or knowledge-base context — is transmitted to such providers solely to generate or process AI outputs. We configure our use of these providers in line with their published business/API data policies. Retention and processing practices vary by provider and may change; we encourage Business Users to review the relevant provider's current policy rather than rely solely on our summary here. Subject to{' '}
             <a href="https://openai.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
               OpenAI's Privacy Policy
             </a>.
           </li>
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
-            <strong className="text-[var(--ink)]">MongoDB:</strong>{' '}
-            For secure, encrypted data storage of conversation logs and account information.
-          </li>
-          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
-            <strong className="text-[var(--ink)]">International Data Transfers:</strong>{' '}
-            Because Meta, OpenAI, and MongoDB operate infrastructure globally, your data may be transferred to, stored in, and processed in countries outside India, including the United States. By using our services, you acknowledge and consent to this transfer.
+            <strong className="text-[var(--ink)]">MongoDB (Atlas):</strong>{' '}
+            Used for storage of conversation logs and account information, with access controls in place.
           </li>
         </ul>
       </>
     ),
   },
   {
-    number: '05',
+    number: '08',
     title: 'Business Client Responsibilities',
     content: (
+      <ul className="list-none space-y-3">
+        <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+          Informing their own customers about the use of automated/AI-powered messaging
+        </li>
+        <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+          Ensuring they have a lawful basis to process their customers' personal data
+        </li>
+        <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+          Complying with applicable data protection regulations in their own jurisdiction
+        </li>
+        <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+          Not uploading content they are not authorized to share with us or our subprocessors
+        </li>
+      </ul>
+    ),
+  },
+  {
+    number: '09',
+    title: 'Data Storage, Security, and Retention',
+    content: (
+      <>
+        <p className="mb-4">
+          We use TLS/HTTPS for data in transit, webhook signature verification, and access controls.
+        </p>
+        <p>
+          <strong className="text-[var(--ink)]">Retention:</strong>{' '}
+          Conversation logs and account information are retained for up to 12 months from the last activity on an account, unless a Business User requests earlier deletion or a longer period is required to comply with law. Backups may persist for a limited additional period before being permanently purged. Business content used for AI/RAG purposes is retained until the associated account is deleted or the content is removed by the Business User.
+        </p>
+      </>
+    ),
+  },
+  {
+    number: '10',
+    title: 'International Data Transfers',
+    content: (
       <p>
-        Businesses using Ontara Connect are responsible for informing their own customers about the use of automated messaging services and ensuring compliance with applicable data protection regulations in their jurisdiction.
+        Because Meta, OpenAI, and MongoDB operate infrastructure globally, personal data may be processed in countries outside India, including the United States. Such processing is necessary to provide our services. We take reasonable contractual, technical, and organisational measures in relation to such processing and will comply with applicable Indian data protection requirements concerning cross-border transfer of personal data as they come into effect.
       </p>
     ),
   },
   {
-    number: '06',
+    number: '11',
+    title: 'Data Breach',
+    content: (
+      <p>
+        In the event of a personal data breach affecting your information, we will take reasonable steps to contain and assess the incident and will notify affected Business Users and, where legally required, the appropriate regulatory authorities, without undue delay and in line with applicable law.
+      </p>
+    ),
+  },
+  {
+    number: '12',
     title: "Children's Data",
     content: (
       <p>
-        Our services are not directed to children, and WhatsApp's own terms restrict use of its platform by individuals under 13. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected data from a child, we will take steps to delete it promptly. If you believe a child's data has been shared with us, please contact us at{' '}
+        Ontara Connect is intended for use by businesses and their customers, and is not directed to children. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected data from a child, we will take steps to delete it promptly. If you believe a child's data has been shared with us, please contact us at{' '}
         <a href="mailto:ontaraai@gmail.com" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
           ontaraai@gmail.com
         </a>.
@@ -132,7 +219,7 @@ const sections = [
     ),
   },
   {
-    number: '07',
+    number: '13',
     title: 'Your Rights',
     content: (
       <>
@@ -146,7 +233,7 @@ const sections = [
             <a href="mailto:ontaraai@gmail.com" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
               ontaraai@gmail.com
             </a>{' '}
-            with the subject line "Data Deletion Request" along with the phone number or business account associated with your data. We will process your request within 30 days.
+            with the subject line "Data Deletion Request" along with the phone number or business account associated with your data. We will review and respond to valid requests within a reasonable period and in accordance with applicable law.
           </li>
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">Opt Out of Messaging:</strong>{' '}
@@ -160,12 +247,16 @@ const sections = [
             </a>.
             Business clients can also view and manage their data through the Ontara Connect admin dashboard.
           </li>
+          <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
+            <strong className="text-[var(--ink)]">Withdraw Consent:</strong>{' '}
+            Where processing relies on consent, you may withdraw it at any time using the contact details above. Withdrawal does not affect the lawfulness of processing carried out before withdrawal, and we may retain limited data where required by law.
+          </li>
         </ul>
       </>
     ),
   },
   {
-    number: '08',
+    number: '14',
     title: 'Limitation of Liability',
     content: (
       <p>
@@ -174,7 +265,7 @@ const sections = [
     ),
   },
   {
-    number: '09',
+    number: '15',
     title: 'Governing Law and Jurisdiction',
     content: (
       <p>
@@ -183,7 +274,7 @@ const sections = [
     ),
   },
   {
-    number: '10',
+    number: '16',
     title: 'Changes to This Policy',
     content: (
       <p>
@@ -217,7 +308,7 @@ export default function Privacy() {
               </p>
               <span className="hidden sm:block w-1 h-1 rounded-full bg-[var(--accent)]" />
               <p className="text-sm text-[var(--muted)] font-mono tracking-wide">
-                Last updated: June 2026
+                Last updated: August 2026
               </p>
             </div>
           </motion.div>
@@ -282,7 +373,7 @@ export default function Privacy() {
             <div>
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-[1px] bg-white/20" />
-                <p className="text-xs font-mono tracking-widest uppercase text-white/50">Section 11</p>
+                <p className="text-xs font-mono tracking-widest uppercase text-white/50">Section 17</p>
               </div>
               <h2 className="text-4xl md:text-5xl font-sans font-medium tracking-tight leading-tight">
                 Contact Us
