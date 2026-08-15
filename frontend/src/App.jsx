@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import Work from './pages/Work';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/work" element={<PageWrapper><Work /></PageWrapper>} />
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
+          <Route path="/blog/:slug" element={<PageWrapper><BlogPost /></PageWrapper>} />
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
           <Route path="/privacy" element={<PageWrapper><Privacy /></PageWrapper>} />
         </Routes>

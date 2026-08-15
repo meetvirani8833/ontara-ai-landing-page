@@ -395,6 +395,7 @@ export default function Privacy() {
                   </span>
                   <span className="text-lg font-mono tracking-wide">ontaraai@gmail.com</span>
                 </a>
+
                 <a
                   href="https://ontaraai.solutions"
                   target="_blank"

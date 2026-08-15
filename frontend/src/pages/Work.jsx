@@ -4,9 +4,38 @@ import ArrowUpRightIcon from '../components/ui/icons/ArrowUpRightIcon';
 
 const caseStudies = [
   {
+    id: 'ontara-connect',
+    tag: 'WHATSAPP AUTOMATION',
+    number: '01',
+    title: 'Ontara Connect: WhatsApp Business CRM & AI Chatbot',
+    subtitle: 'A multi-tenant platform that turns WhatsApp inquiries into automated conversations, organized leads, and trackable marketing campaigns.',
+    industry: 'SaaS / Business Messaging',
+    color: 'from-[#56b6c2] to-[#25d366]',
+
+    problem: [
+      'Small businesses running Meta ads generate a steady stream of WhatsApp inquiries, but every missed or late reply is a lost sale. Manual replies don\'t scale, and generic broadcast blasts get numbers banned instead of driving conversions.'
+    ],
+
+    architecture: [
+      'We built a multi-tenant platform on FastAPI and MongoDB, integrated directly with the official WhatsApp Cloud API and Meta Embedded Signup, so each client business connects its own number through officially sanctioned infrastructure rather than an unofficial bridge.',
+
+      'Every inbound message is handled by an OpenAI-powered agent grounded in that business\'s own product catalog and knowledge base, so replies stay accurate to real stock, pricing, and policy. The agent detects frustration or complex requests and automatically pauses itself, handing the conversation to a human in a live team inbox. A separate campaign engine lets businesses send rich WhatsApp templates (image carousels, buttons) with per-message analytics, all tracked per tenant.'
+    ],
+
+    stack: ['FastAPI', 'MongoDB (Motor)', 'OpenAI GPT-4o-mini', 'WhatsApp Cloud API', 'React', 'JWT Auth'],
+
+    results: [
+      { stat: '24/7', label: "Instant AI replies grounded in each business's own catalog" },
+      { stat: 'Multi-tenant', label: 'One platform running many client businesses independently' },
+      { stat: 'Human-in-the-loop', label: 'Automatic escalation the moment the AI detects it should step back' },
+    ],
+
+    quote: 'The AI never guesses. It only ever answers from what the business itself has told it, and it knows exactly when to get out of the way for a human.'
+  },
+  {
     id: 'dfuse',
     tag: 'DATA INTELLIGENCE',
-    number: '01',
+    number: '02',
     title: 'Dfuse Data: Enterprise Text-to-SQL',
     subtitle: 'Making a highly interconnected enterprise sales database conversational without hallucinating joins.',
     industry: 'Enterprise Data Architecture',
@@ -29,7 +58,7 @@ const caseStudies = [
   {
     id: 'Decider AI',
     tag: 'DECISION INTELLIGENCE',
-    number: '02',
+    number: '03',
     title: 'Decider AI: Self-Mutating Dashboards',
     subtitle: 'An agent-driven platform that understands datasets, mutates dashboards dynamically, and recommends decisions.',
     industry: 'Business Analytics & Ops',
@@ -52,7 +81,7 @@ const caseStudies = [
 {
   id: 'support-os',
   tag: 'SUPPORT AI',
-  number: '03',
+  number: '04',
   title: 'SupportOS',
   subtitle: 'A support system that not only resolves queries, but analyzes conversations to surface real customer insights.',
   industry: 'SaaS / Customer Operations',

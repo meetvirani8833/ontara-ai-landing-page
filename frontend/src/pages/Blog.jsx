@@ -2,36 +2,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ArrowRightIcon from '../components/ui/icons/ArrowRightIcon';
 import ArrowUpRightIcon from '../components/ui/icons/ArrowUpRightIcon';
+import { blogPosts as articles } from '../data/blogPosts';
 
-const articles = [
-  {
-    number: '01',
-    tag: 'GRAPH DATABASES & ORCHESTRATION',
-    date: 'March 2026',
-    title: 'Why Neo4j outperforms vector databases for LLM SQL Schema mapping.',
-    excerpt: "Building a Text-to-SQL system that translates natural language into database operations is easy. Building one that doesn't hallucinate foreign-key relationships on a 400-table enterprise schema is incredibly difficult. Here is why you must calculate shortest path joins deterministically.",
-    readTime: '12 min read',
-    glow: 'from-[#e06c75] to-[#c678dd]',
-  },
-  {
-    number: '02',
-    tag: 'AI ARCHITECTURE',
-    date: 'February 2026',
-    title: 'Agents THINK, Tools DO: Safe architecture for decision intelligence.',
-    excerpt: "You should never give an LLM direct WRITE access to your database. In this article, we map out the exact LangGraph state machine we use to strictly isolate reasoning nodes from deterministic execution layers.",
-    readTime: '8 min read',
-    glow: 'from-[#e5c07b] to-[#d19a66]',
-  },
-  {
-    number: '03',
-    tag: 'LLM APPLICATIONS',
-    date: 'January 2026',
-    title: 'The difference between a chatbot and an AI agent (and why it matters).',
-    excerpt: "Businesses keep buying chatbots when they actually need agents. The distinction isn't semantic, it's functional, architectural, and strategic. Chatbots retrieve; Agents execute. Let's break it down.",
-    readTime: '6 min read',
-    glow: 'from-[#98c379] to-[#61afef]',
-  },
-];
+const MotionLink = motion(Link);
 
 export default function Blog() {
   return (
@@ -74,57 +47,63 @@ export default function Blog() {
         <section className="pb-24 md:pb-32 px-6 md:px-12">
           <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
             
-            {articles.map((a, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative overflow-hidden bg-white/[0.01] border border-white/10 hover:border-[#e5c07b]/30 rounded-[2rem] p-8 md:p-16 transition-all duration-500"
-              >
-                {/* Internal Glow Effect */}
-                <div className={`absolute top-0 right-[-10%] w-[50%] h-[120%] rounded-full bg-gradient-to-tr ${a.glow} blur-[120px] opacity-0 group-hover:opacity-10 transition-opacity duration-1000 mix-blend-screen pointer-events-none`} />
+            {articles.map((a, i) => {
+              const Wrapper = a.slug ? MotionLink : motion.div;
+              const wrapperProps = a.slug ? { to: `/blog/${a.slug}` } : {};
 
-                <div className="relative z-10 grid lg:grid-cols-[1.5fr_1fr] gap-12 lg:gap-24 items-end">
-                  
-                  <div className="flex flex-col gap-6 md:gap-8">
-                    <div className="flex items-center gap-4 flex-wrap">
-                      <span className="font-mono text-sm tracking-widest text-[#e5c07b] bg-[#e5c07b]/10 border border-[#e5c07b]/20 px-3 py-1 rounded-full">
-                        {a.number}
-                      </span>
-                      <span className="font-mono text-xs tracking-widest uppercase text-white/40 border border-white/10 px-3 py-1 rounded-full">
-                        {a.tag}
-                      </span>
-                      <span className="font-mono text-xs tracking-widest text-white/30 hidden md:block">
-                        {a.date}
-                      </span>
+              return (
+                <Wrapper
+                  key={i}
+                  {...wrapperProps}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group relative overflow-hidden bg-white/[0.01] border border-white/10 hover:border-[#e5c07b]/30 rounded-[2rem] p-8 md:p-16 transition-all duration-500 block"
+                >
+                  {/* Internal Glow Effect */}
+                  <div className={`absolute top-0 right-[-10%] w-[50%] h-[120%] rounded-full bg-gradient-to-tr ${a.glow} blur-[120px] opacity-0 group-hover:opacity-10 transition-opacity duration-1000 mix-blend-screen pointer-events-none`} />
+
+                  <div className="relative z-10 grid lg:grid-cols-[1.5fr_1fr] gap-12 lg:gap-24 items-end">
+
+                    <div className="flex flex-col gap-6 md:gap-8">
+                      <div className="flex items-center gap-4 flex-wrap">
+                        <span className="font-mono text-sm tracking-widest text-[#e5c07b] bg-[#e5c07b]/10 border border-[#e5c07b]/20 px-3 py-1 rounded-full">
+                          {a.number}
+                        </span>
+                        <span className="font-mono text-xs tracking-widest uppercase text-white/40 border border-white/10 px-3 py-1 rounded-full">
+                          {a.tag}
+                        </span>
+                        <span className="font-mono text-xs tracking-widest text-white/30 hidden md:block">
+                          {a.date}
+                        </span>
+                      </div>
+
+                      <h2 className="text-3xl md:text-4xl font-sans  leading-tight tracking-tight text-white group-hover:text-[#e5c07b] transition-colors duration-500">
+                        {a.title}
+                      </h2>
+
+                      <p className="text-lg md:text-xl font-sans text-white/50 leading-relaxed max-w-[700px]">
+                        {a.excerpt}
+                      </p>
                     </div>
-                    
-                    <h2 className="text-3xl md:text-4xl font-sans  leading-tight tracking-tight text-white group-hover:text-[#e5c07b] transition-colors duration-500">
-                      {a.title}
-                    </h2>
-                    
-                    <p className="text-lg md:text-xl font-sans text-white/50 leading-relaxed max-w-[700px]">
-                      {a.excerpt}
-                    </p>
-                  </div>
 
-                  <div className="flex lg:flex-col lg:items-end justify-between lg:justify-end gap-6 h-full">
-                    <span className="font-mono text-xs tracking-widest text-white/30">{a.readTime}</span>
-                    <div className="flex items-center gap-3">
-                       <span className="text-xs uppercase font-mono tracking-widest font-bold text-white/50 group-hover:text-white transition-colors">
-                         Read Study
-                       </span>
-                       <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#e5c07b] group-hover:border-[#e5c07b] group-hover:text-black transition-all">
-                         <ArrowUpRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                       </div>
+                    <div className="flex lg:flex-col lg:items-end justify-between lg:justify-end gap-6 h-full">
+                      <span className="font-mono text-xs tracking-widest text-white/30">{a.readTime}</span>
+                      <div className="flex items-center gap-3">
+                         <span className="text-xs uppercase font-mono tracking-widest font-bold text-white/50 group-hover:text-white transition-colors">
+                           {a.slug ? 'Read Article' : 'Read Study'}
+                         </span>
+                         <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#e5c07b] group-hover:border-[#e5c07b] group-hover:text-black transition-all">
+                           <ArrowUpRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                         </div>
+                      </div>
                     </div>
-                  </div>
 
-                </div>
-              </motion.div>
-            ))}
+                  </div>
+                </Wrapper>
+              );
+            })}
 
           </div>
         </section>

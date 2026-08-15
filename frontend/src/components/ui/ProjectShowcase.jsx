@@ -4,17 +4,18 @@ import ArrowUpRightIcon from './icons/ArrowUpRightIcon';
 import SupportOSAnimation from './animations/SupportOSAnimation';
 import DfuseAnimation from './animations/DfuseAnimation';
 import DeciderAnimation from './animations/DeciderAnimation';
+import OntaraConnectAnimation from './animations/OntaraConnectAnimation';
 
 const projects = [
   {
-    id: 'supportos',
-    name: 'SupportOS',
-    tags: ['SUPPORT', 'ANALYSIS', 'INTELLIGENCE'],
-    title: "Support teams are usually drowned in tickets with no visibility into patterns. We built an AI system that resolves queries instantly while continuously analyzing conversations - surfacing sentiment trends, recurring issues, and actionable intelligence from every interaction.",
-    glow: 'from-[#98c379] to-[#61afef]',
-    link: 'https://supportos.site',
+    id: 'ontara-connect',
+    name: 'Ontara Connect',
+    tags: ['WHATSAPP', 'MULTI-TENANT', 'AUTOMATION'],
+    title: "Businesses running ads on Instagram and Facebook lose leads the moment a WhatsApp message goes unanswered, and generic broadcast tools just trigger spam bans. We built a multi-tenant WhatsApp CRM where an AI agent replies instantly from a business's own catalog and knowledge base, organizes every lead automatically, and hands off to a human the moment a conversation needs one.",
+    glow: 'from-[#56b6c2] to-[#25d366]',
+    link: 'https://ontara-connect-test.vercel.app/',
     external: true,
-    Animation: SupportOSAnimation,
+    Animation: OntaraConnectAnimation,
   },
   {
     id: 'dfuse',
@@ -25,6 +26,16 @@ const projects = [
     link: 'https://dfuse.site',
     external: true,
     Animation: DfuseAnimation,
+  },
+  {
+    id: 'supportos',
+    name: 'SupportOS',
+    tags: ['SUPPORT', 'ANALYSIS', 'INTELLIGENCE'],
+    title: "Support teams are usually drowned in tickets with no visibility into patterns. We built an AI system that resolves queries instantly while continuously analyzing conversations - surfacing sentiment trends, recurring issues, and actionable intelligence from every interaction.",
+    glow: 'from-[#98c379] to-[#61afef]',
+    link: 'https://supportos.site',
+    external: true,
+    Animation: SupportOSAnimation,
   },
   {
     id: 'decider',
@@ -141,7 +152,7 @@ export default function ProjectShowcase() {
                           <ArrowUpRightIcon className="w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                         </div>
                         <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#e5c07b] uppercase group-hover/btn:text-white transition-colors duration-300">
-                          Visit Project
+                          Visit Product
                         </span>
                       </a>
                     ) : (
