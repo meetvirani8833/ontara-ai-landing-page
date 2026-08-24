@@ -4,19 +4,11 @@ import ArrowUpRightIcon from '../components/ui/icons/ArrowUpRightIcon';
 
 const team = [
 {
-  name: 'Meet',
-  role: 'AI Architect & Co-founder',
-  bio: 'Leads AI system design and architecture, focusing on agent frameworks, LLM pipelines, and scalable system design. Specializes in turning complex AI capabilities into structured, production-ready architectures.',
-  initials: 'M',
+  name: 'Ontara AI',
+  role: 'AI Engineering Team',
+  bio: 'We design and ship production AI systems end to end, from agent frameworks and LLM pipelines to the backend APIs, data pipelines, and integrations that connect models to real-world systems. No account managers, no handoffs, just engineers turning complex AI capabilities into structured, reliable, production-ready architectures.',
+  initials: 'OA',
   glow: 'from-[#98c379] to-[#61afef]',
-  link: 'https://www.linkedin.com/in/meet-virani/',
-},
-{
-  name: 'Jash',
-  role: 'AI Engineer & Co-founder',
-  bio: 'Builds and deploys production AI systems, from backend APIs to data pipelines and integrations. Focused on connecting models with real-world systems, ensuring reliability, performance, and seamless execution.',
-  initials: 'J',
-  glow: 'from-[#e06c75] to-[#c678dd]',
 },
 ];
 
@@ -73,7 +65,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-4xl md:text-4xl font-sans text-[var(--ink)] leading-tight"
             >
-              Two engineers.<br />One obsession.
+One team.<br />One obsession.
             </motion.h2>
             
             <motion.div 
@@ -207,7 +199,7 @@ export default function About() {
               to="/contact" 
               className="inline-flex items-center gap-4 bg-black text-white px-8 py-4 rounded-full uppercase tracking-widest text-xs font-bold hover:scale-105 transition-transform"
             >
-              Contact the founders
+              Contact Ontara AI
               <ArrowUpRightIcon className="w-4 h-4" />
             </Link>
           </motion.div>

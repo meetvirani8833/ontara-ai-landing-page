@@ -9,7 +9,7 @@ const approaches = [
   {
     num: "02",
     title: "You work directly with the engineers.",
-    desc: "No account managers, no handoffs. Meet and Jash are on every single project from the first discovery call all the way to final deployment and maintenance."
+    desc: "No account managers, no handoffs. Ontara AI is on every single project from the first discovery call all the way to final deployment and maintenance."
   },
   {
     num: "03",

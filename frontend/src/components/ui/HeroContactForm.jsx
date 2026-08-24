@@ -92,7 +92,7 @@ export default function HeroContactForm() {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="font-mono text-[10px] sm:text-xs tracking-widest uppercase text-[var(--ink)]/40 leading-snug"
             >
-              Meet or Jash will reply shortly.
+              Ontara AI will reply shortly.
             </motion.p>
           </div>
         </div>

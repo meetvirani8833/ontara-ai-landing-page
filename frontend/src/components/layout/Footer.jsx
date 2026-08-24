@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="mb-14">
             <h2 className="text-2xl md:text-[2rem] font-medium tracking-tight mb-8 leading-snug" style={{ fontFamily: 'Inter, sans-serif' }}>
               Would you like to work with us on a project?<br/>
-              Contact Meet or Jash.
+              Contact Ontara AI.
             </h2>
             <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[10px] font-bold tracking-widest uppercase transition-transform hover:scale-105 text-black" style={{ backgroundColor: '#F3EAC2' }}>
               SEND US A MESSAGE <ArrowRightIcon className="w-3 h-3" />
@@ -52,40 +52,20 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4 w-full pr-0 lg:pr-12">
-            {/* Developer 1: Meet */}
             <a
-              href="mailto:vmeet@gmail.com"
+              href="mailto:ontaraai@gmail.com"
               className="group flex items-center gap-5 px-5 py-4 rounded-2xl border border-white/10 hover:border-white/25 transition-all duration-300 hover:bg-white/[0.03]"
             >
               <div
                 className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold tracking-tight select-none"
-                style={{ background: 'linear-gradient(135deg, #1A2540 0%, #0A0F1A 100%)', border: '1px solid rgba(59,130,246,0.3)', color: '#93b4f5' }}
+                style={{ background: 'linear-gradient(135deg, #2A2010 0%, #120D05 100%)', border: '1px solid rgba(229,192,123,0.3)', color: '#e5c07b' }}
               >
-                M
+                OA
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-sm font-medium text-white tracking-tight">Meet</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/35 mt-0.5">AI Architect</span>
-                <span className="text-[10px] font-mono text-white/50 mt-1 group-hover:text-white/80 transition-colors truncate">vmeet@gmail.com</span>
-              </div>
-              <ArrowUpRightIcon className="w-3.5 h-3.5 ml-auto shrink-0 text-white/20 group-hover:text-white/60 transition-colors" />
-            </a>
-
-            {/* Developer 2: Jash */}
-            <a
-              href="mailto:jashkevdiya@gmail.com"
-              className="group flex items-center gap-5 px-5 py-4 rounded-2xl border border-white/10 hover:border-white/25 transition-all duration-300 hover:bg-white/[0.03]"
-            >
-              <div
-                className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold tracking-tight select-none"
-                style={{ background: 'linear-gradient(135deg, #2E1A1A 0%, #120505 100%)', border: '1px solid rgba(239,68,68,0.25)', color: '#f4a4a4' }}
-              >
-                J
-              </div>
-              <div className="flex flex-col min-w-0">
-                <span className="text-sm font-medium text-white tracking-tight">Jash</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/35 mt-0.5">Lead Engineer</span>
-                <span className="text-[10px] font-mono text-white/50 mt-1 group-hover:text-white/80 transition-colors truncate">jashkevdiya@gmail.com</span>
+                <span className="text-sm font-medium text-white tracking-tight">Ontara AI</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/35 mt-0.5">Engineering Team</span>
+                <span className="text-[10px] font-mono text-white/50 mt-1 group-hover:text-white/80 transition-colors truncate">ontaraai@gmail.com</span>
               </div>
               <ArrowUpRightIcon className="w-3.5 h-3.5 ml-auto shrink-0 text-white/20 group-hover:text-white/60 transition-colors" />
             </a>

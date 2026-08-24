@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import ArrowUpRightIcon from './icons/ArrowUpRightIcon';
 import SupportOSAnimation from './animations/SupportOSAnimation';
 import DfuseAnimation from './animations/DfuseAnimation';
-import DeciderAnimation from './animations/DeciderAnimation';
 import OntaraConnectAnimation from './animations/OntaraConnectAnimation';
 
 const projects = [
@@ -12,7 +11,7 @@ const projects = [
     name: 'Ontara Connect',
     tags: ['WHATSAPP', 'MULTI-TENANT', 'AUTOMATION'],
     title: "Businesses running ads on Instagram and Facebook lose leads the moment a WhatsApp message goes unanswered, and generic broadcast tools just trigger spam bans. We built a multi-tenant WhatsApp CRM where an AI agent replies instantly from a business's own catalog and knowledge base, organizes every lead automatically, and hands off to a human the moment a conversation needs one.",
-    glow: 'from-[#56b6c2] to-[#25d366]',
+    glow: 'from-[#56b6c2] to-[#00a884]',
     link: 'https://ontara-connect-test.vercel.app/',
     external: true,
     Animation: OntaraConnectAnimation,
@@ -36,16 +35,6 @@ const projects = [
     link: 'https://supportos.site',
     external: true,
     Animation: SupportOSAnimation,
-  },
-  {
-    id: 'decider',
-    name: 'Decider AI',
-    tags: ['DASHBOARD', 'SELF-MUTATING', 'AGENTS'],
-    title: "Sales teams usually export CSVs and wait days for reports. We built an agent-driven Intelligence Dashboard: upload raw data, get instant AI-generated visualizations, and receive actionable recommendations. The dashboard mutates itself based on what it discovers in your data.",
-    glow: 'from-[#e5c07b] to-[#d19a66]',
-    link: '/work',
-    external: false,
-    Animation: DeciderAnimation,
   }
 ];
 

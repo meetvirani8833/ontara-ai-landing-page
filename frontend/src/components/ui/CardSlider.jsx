@@ -34,7 +34,7 @@ const cards = [
   },
   {
     title: 'Start a Project',
-    desc: 'Would you like to work with Meet or Jash?',
+    desc: 'Would you like to work with Ontara AI?',
     link: '/contact',
     glow: 'from-[#98c379] to-[#e5c07b]',
     tag: 'CONTACT',

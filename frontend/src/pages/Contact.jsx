@@ -102,24 +102,13 @@ export default function Contact() {
 
                 <div>
                   <p className="font-mono text-xs tracking-widest text-white/30 uppercase mb-6">Direct Line To</p>
-                  <div className="flex gap-6">
-                    <div className="flex items-center gap-4 border border-white/10 bg-white/[0.02] p-4 rounded-2xl w-full">
-                      <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black">
-                        <span className="font-sans font-bold text-lg text-[#e5c07b]">MV</span>
-                      </div>
-                      <div>
-                        <p className="font-sans text-lg">Meet</p>
-                        <p className="font-mono text-[10px] text-white/40 uppercase tracking-wider">AI/ML Engineer</p>
-                      </div>
+                  <div className="flex items-center gap-4 border border-white/10 bg-white/[0.02] p-4 rounded-2xl w-full">
+                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black">
+                      <span className="font-sans font-bold text-lg text-[#e5c07b]">OA</span>
                     </div>
-                    <div className="flex items-center gap-4 border border-white/10 bg-white/[0.02] p-4 rounded-2xl w-full">
-                      <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black">
-                        <span className="font-sans font-bold text-lg text-[#61afef]">J</span>
-                      </div>
-                      <div>
-                        <p className="font-sans text-lg">Jash</p>
-                        <p className="font-mono text-[10px] text-white/40 uppercase tracking-wider">AI Architect</p>
-                      </div>
+                    <div>
+                      <p className="font-sans text-lg">Ontara AI</p>
+                      <p className="font-mono text-[10px] text-white/40 uppercase tracking-wider">Engineering Team</p>
                     </div>
                   </div>
                 </div>
@@ -301,7 +290,7 @@ export default function Contact() {
                         transition={{ delay: 0.6, duration: 0.5 }}
                         className="text-sm md:text-lg font-sans text-white/40 max-w-[320px] md:max-w-[360px] mx-auto leading-relaxed"
                       >
-                        Meet or Jash will personally follow up with you shortly.
+                        Ontara AI will personally follow up with you shortly.
                       </motion.p>
                     </div>
 
