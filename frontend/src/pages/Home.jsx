@@ -51,11 +51,11 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* ─── FOLD TWO: SERVICES HIGHLIGHT ─── */}
-      <ServicesHighlight />
-
-      {/* ─── FOLD THREE: PROJECT SHOWCASE ─── */}
+      {/* ─── FOLD TWO: PROJECT SHOWCASE ─── */}
       <ProjectShowcase />
+
+      {/* ─── FOLD THREE: SERVICES HIGHLIGHT ─── */}
+      <ServicesHighlight />
 
       {/* ─── FOLD FOUR: APPROACH SECTION ─── */}
       <ApproachSection />
