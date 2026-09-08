@@ -12,7 +12,7 @@ const projects = [
     tags: ['WHATSAPP', 'MULTI-TENANT', 'AUTOMATION'],
     title: "Businesses running ads on Instagram and Facebook lose leads the moment a WhatsApp message goes unanswered, and generic broadcast tools just trigger spam bans. We built a multi-tenant WhatsApp CRM where an AI agent replies instantly from a business's own catalog and knowledge base, organizes every lead automatically, and hands off to a human the moment a conversation needs one.",
     glow: 'from-[#56b6c2] to-[#00a884]',
-    link: 'https://ontara-connect-test.vercel.app/',
+    link: 'https://connect.ontaraai.solutions',
     external: true,
     Animation: OntaraConnectAnimation,
   },
