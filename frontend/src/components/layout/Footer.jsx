@@ -53,7 +53,7 @@ export default function Footer() {
 
           <div className="flex flex-col gap-4 w-full pr-0 lg:pr-12">
             <a
-              href="mailto:ontaraai@gmail.com"
+              href="mailto:contact@ontaraai.solutions"
               className="group flex items-center gap-5 px-5 py-4 rounded-2xl border border-white/10 hover:border-white/25 transition-all duration-300 hover:bg-white/[0.03]"
             >
               <div
@@ -65,7 +65,7 @@ export default function Footer() {
               <div className="flex flex-col min-w-0">
                 <span className="text-sm font-medium text-white tracking-tight">Ontara AI</span>
                 <span className="text-[10px] uppercase tracking-widest text-white/35 mt-0.5">Engineering Team</span>
-                <span className="text-[10px] font-mono text-white/50 mt-1 group-hover:text-white/80 transition-colors truncate">ontaraai@gmail.com</span>
+                <span className="text-[10px] font-mono text-white/50 mt-1 group-hover:text-white/80 transition-colors truncate">contact@ontaraai.solutions</span>
               </div>
               <ArrowUpRightIcon className="w-3.5 h-3.5 ml-auto shrink-0 text-white/20 group-hover:text-white/60 transition-colors" />
             </a>
@@ -126,7 +126,7 @@ export default function Footer() {
           <div className="mt-16 lg:mt-24 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-wider font-mono text-white/50">
             <p>© 2025–2026 Ontara AI</p>
             <div className="flex items-center gap-6">
-              <a href="mailto:ontaraai@gmail.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">ontaraai@gmail.com</a>
+              <a href="mailto:contact@ontaraai.solutions" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">contact@ontaraai.solutions</a>
               <a href="https://www.linkedin.com/company/ontaraai/posts/?feedView=all" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
             </div>
           </div>

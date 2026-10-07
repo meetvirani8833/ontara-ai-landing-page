@@ -212,8 +212,8 @@ const sections = [
     content: (
       <p>
         Ontara Connect is intended for use by businesses and their customers, and is not directed to children. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected data from a child, we will take steps to delete it promptly. If you believe a child's data has been shared with us, please contact us at{' '}
-        <a href="mailto:ontaraai@gmail.com" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
-          ontaraai@gmail.com
+        <a href="mailto:contact@ontaraai.solutions" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
+          contact@ontaraai.solutions
         </a>.
       </p>
     ),
@@ -230,8 +230,8 @@ const sections = [
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">Request Data Deletion:</strong>{' '}
             Send an email to{' '}
-            <a href="mailto:ontaraai@gmail.com" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
-              ontaraai@gmail.com
+            <a href="mailto:contact@ontaraai.solutions" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
+              contact@ontaraai.solutions
             </a>{' '}
             with the subject line "Data Deletion Request" along with the phone number or business account associated with your data. We will review and respond to valid requests within a reasonable period and in accordance with applicable law.
           </li>
@@ -242,8 +242,8 @@ const sections = [
           <li className="pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-[1px] before:bg-[var(--accent)]">
             <strong className="text-[var(--ink)]">Access Your Data:</strong>{' '}
             You may request a copy of the personal data we hold about you by emailing{' '}
-            <a href="mailto:ontaraai@gmail.com" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
-              ontaraai@gmail.com
+            <a href="mailto:contact@ontaraai.solutions" className="text-[var(--accent)] hover:text-[var(--ink)] transition-colors underline underline-offset-4 decoration-[var(--accent)]/40 hover:decoration-[var(--ink)]">
+              contact@ontaraai.solutions
             </a>.
             Business clients can also view and manage their data through the Ontara Connect admin dashboard.
           </li>
@@ -385,7 +385,7 @@ export default function Privacy() {
               </p>
               <div className="flex flex-col gap-4">
                 <a
-                  href="mailto:ontaraai@gmail.com"
+                  href="mailto:contact@ontaraai.solutions"
                   className="group inline-flex items-center gap-4 text-white/80 hover:text-[var(--accent)] transition-colors"
                 >
                   <span className="w-10 h-10 rounded-full border border-white/10 group-hover:border-[var(--accent)]/30 flex items-center justify-center transition-colors">
@@ -393,7 +393,7 @@ export default function Privacy() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                     </svg>
                   </span>
-                  <span className="text-lg font-mono tracking-wide">ontaraai@gmail.com</span>
+                  <span className="text-lg font-mono tracking-wide">contact@ontaraai.solutions</span>
                 </a>
 
                 <a

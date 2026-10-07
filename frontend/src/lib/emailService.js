@@ -3,7 +3,7 @@
 // HOW TO SET UP (one-time, takes 5 minutes):
 //
 // 1. Go to https://www.emailjs.com/ and create a free account
-// 2. Add a new Email Service → connect your Gmail (ontaraai@gmail.com)
+// 2. Add a new Email Service → connect your Gmail (contact@ontaraai.solutions)
 //    → copy the "Service ID" and paste below as VITE_EMAILJS_SERVICE_ID
 // 3. Create an Email Template with these variables:
 //       {{from_name}}, {{from_email}}, {{subject}}, {{message}}

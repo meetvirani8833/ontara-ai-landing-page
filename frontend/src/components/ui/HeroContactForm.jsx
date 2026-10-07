@@ -125,7 +125,7 @@ export default function HeroContactForm() {
           animate={{ opacity: 1 }}
           className="text-xs font-mono text-red-400 mb-3 px-2"
         >
-          Something went wrong. Please email us directly at ontaraai@gmail.com
+          Something went wrong. Please email us directly at contact@ontaraai.solutions
         </motion.p>
       )}
       <div
