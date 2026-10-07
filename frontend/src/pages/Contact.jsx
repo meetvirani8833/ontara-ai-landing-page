@@ -93,10 +93,10 @@ export default function Contact() {
                 <div>
                    <p className="font-mono text-xs tracking-widest text-[#e5c07b] uppercase mb-6">Primary Contact</p>
                    <a 
-                     href="mailto:ontaraai@gmail.com" 
+                     href="mailto:contact@ontaraai.solutions" 
                      className="text-3xl md:text-4xl font-sans text-white hover:text-white/70 transition-colors break-all"
                    >
-                     ontaraai@gmail.com
+                     contact@ontaraai.solutions
                    </a>
                 </div>
 
@@ -210,7 +210,7 @@ export default function Contact() {
                         animate={{ opacity: 1 }}
                         className="text-xs font-mono text-red-400 mt-4 tracking-widest"
                       >
-                        ⚠ Send failed. Please email us directly at ontaraai@gmail.com
+                        ⚠ Send failed. Please email us directly at contact@ontaraai.solutions
                       </motion.p>
                     )}
 
